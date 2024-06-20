@@ -1,0 +1,16 @@
+2026-06-20 initial version of rewrite-forticap.py by Robert Bugala (londi-afk@github.com)
+
+This script can convert dumps from Fortigate CLI. The command to capture debugs should be following:
+
+diagnose sniffer packet npudbg '' 6 0 l
+
+The output should look like:
+
+2024-05-15 15:42:11.125364 npudbg -- 192.168.1.1.443 -> 192.168.2.1.5246: fin 1795716699 ack 3600550434
+0x0000   38c0 ea7d 7e32 8890 09fd dc74 0800 4500        8..}~2.....t..E.
+0x0010   0034 d2d4 4000 7b06 a89c c0a8 0101 c0a8        .4..@.{.....6...
+0x0020   0201 01bb 147e 6b08 765b d69c 0a22 8011        .....~k.v[..."..
+0x0030   2000 a95e 0000 0101 080a 67e3 bbfa 2249        ...c......g..."I
+0x0040   0a88
+
+You can add filters to the packet debug.
